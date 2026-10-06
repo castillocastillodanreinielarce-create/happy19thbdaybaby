@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+
+   background: rgb(112, 6, 6);
+}
+
+/* Main waterfall area */
+
+.waterfall {
+    position: relative;
+
+    width: 100%;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+/* Each stream */
+
+.photo-stream {
+    position: absolute;
+
+    top: -500px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    animation: waterfall 8s linear infinite;
+}
+
+/* Photos */
+
+.photo-stream img {
+    width: 200px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 5px solid white;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Left */
+
+.left {
+    left: 10%;
+
+    animation-duration: 7s;
+}
+
+/* Center */
+
+.center {
+    left: 40%;
+
+    animation-duration: 9s;
+}
+
+/* Right */
+
+.right {
+    right: 0%;
+
+    animation-duration: 8s;
+}
+
+.right-middle{
+    right: 30%;
+
+    animation-duration: 10s;
+}
+
+.left-middle{
+    left: 40%;
+
+    animation-duration: 10s;
+}
+
+.center-middle{
+    left: 30%;
+
+    animation-duration: 10s
+}
+
+.center-middle-1{
+    left:75%;
+
+    animation-duration: 10s
+}
+
+/* Falling animation */
+
+@keyframes waterfall {
+
+    0% {
+        transform: translateY(-600px);
+    }
+
+    100% {
+        transform: translateY(130vh);
+    }
+
+}
+
+.a{
+    position:fixed
+}
